@@ -1,4 +1,4 @@
-import { Button, Col, Container, Nav, Navbar } from "react-bootstrap";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import "./Home.css";
 
