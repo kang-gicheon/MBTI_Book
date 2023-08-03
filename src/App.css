@@ -1,98 +1,39 @@
+.App {
+  text-align: center;
+}
 
-body{
-  margin-left: 20%;
-  border: 1px solid black;
-  width: 1200px;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-#section_container{
-  width: 1200px;
-  height: 464px;
-  padding: 20px;
-  box-sizing: content-box;
-  display: flex;
-  position: relative;
-  overflow: hidden;
-}
-#section_container::after{
-  padding: 20px;
-  width: 1160px;
-  height: 440px;
-  box-sizing: content-box;
-  content: "";
-  background-image: url(../public/img/section_back.jpg);
-  opacity: 0.8;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0.6;
+.App-link {
+  color: #61dafb;
 }
 
-.main_section_gallery{
-  margin: 10px;
-  width: 60%;
-  height: 400px;
-  border: 1px solid black;
-  background-color: lightsalmon;
-}
-
-.sub_section{
-  display: flex;
-  flex-direction: column;
-
-  width: 30%;
-}
-
-.sub_section_gallery1{
-  margin: 10px 10px 10px 40px;
-  width: 100%;
-  height: 190px;
-  border: 1px solid black;
-  box-sizing: content-box;
-  background-color: antiquewhite;
-}
-
-.this_week_books{
-  font-size: 40px;
-  font-weight: bold;
-  padding: 20px;
-  box-sizing: content-box;
-}
-
-
-
-.books_con{
-  padding: 20px;
-  box-sizing: content-box;
-  display: flex;
-  height: 400px;
-}
-
-.books_event{
-  margin: 5px;
-  box-sizing: content-box;
-  width: 360px;
-  height: 300px;
-  background: lightblue;
-  border-radius: 20px;
-}
-
-.book_img{
-  width: 100%;
-  height: 100%;
-  border-radius: 20px;
-}
-
-.books_exp{
-  background: rgb(175, 175, 175);
-  border-radius: 8px;
-}
-
-
-.List_section{
-  border: 2px black solid;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

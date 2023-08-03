@@ -1,15 +1,19 @@
 {
-  "name": "react-layout",
+  "name": "ki_layout",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
-    "modules": "^0.4.0",
+    "bootstrap": "^5.2.3",
+    "module": "^1.2.5",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.14.2",
     "react-scripts": "5.0.1",
+    "styled-components": "^6.0.6",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
