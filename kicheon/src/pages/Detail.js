@@ -1,7 +1,11 @@
 import "./Detail.css";
 
 const Detail = () => {
-  return <div>상세페이지 예정</div>;
+  return (
+    <div>
+      <div>상세 페이지</div>
+    </div>
+  );
 };
 
 export default Detail;
