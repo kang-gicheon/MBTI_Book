@@ -1,6 +1,6 @@
 
 body{
-  margin-left: 10%;
+  margin-left: 20%;
   border: 1px solid black;
   width: 1200px;
   display: flex;
@@ -90,4 +90,9 @@ body{
 .books_exp{
   background: rgb(175, 175, 175);
   border-radius: 8px;
+}
+
+
+.List_section{
+  border: 2px black solid;
 }

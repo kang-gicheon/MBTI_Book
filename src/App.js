@@ -34,7 +34,7 @@ function App() {
       {/* 이주의 추천 도서 text 끝*/}
 
 
-      {/* 추천 도서 속성 관리(시작) */}
+      {/* 이 주의 추천 도서 속성 관리(시작) */}
       <div className='books_con'>
 
         {/* 추천도서 첫번째 layout 사용 관리(시작) */}
@@ -71,7 +71,7 @@ function App() {
 
 
       </div>
-      {/* 추천 도서 속성 관리(끝) */}
+      {/* 이 주의 추천 도서 속성 관리(끝) */}
 
 
       {/* 도서관장 추천 도서(시작)*/}
@@ -81,6 +81,7 @@ function App() {
       {/* 도서관장 추천 도서(끝)*/}
 
 
+      {/* 도서관장의 추천 도서 속성 관리(시작) */}
       <div className='books_con'>
 
         <div className='books_event'>
@@ -106,8 +107,19 @@ function App() {
         </div>
 
       </div>
+      {/* 도서관장의 추천 도서 속성 관리(끝) */}
 
 
+      {/* List_section 속성 관리(시작) - 아직 사용 용도를 정확히 정해놓지 않음 추후에 수정예정 */}
+      <div className='List_section'>
+
+
+        <div className='this_week_books'>
+          미지정 제목
+        </div>
+        여긴 아마 user가 쓴 독후감이나 잡다한 글이 들어가지 않을까
+      </div>
+      {/* List_section 속성 관리(끝) */}
     </div>
   );
 }
