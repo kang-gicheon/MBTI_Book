@@ -1,0 +1,45 @@
+.modal_container{
+    border: 1px solid black;
+    width: 650px;
+    height: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.book_cover{
+    width: 100%;
+    height: 60%;
+    box-sizing: border-box;
+    margin: 5px;
+}
+
+.book_cover_img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.exp_section{
+    width: 100%;
+    height: 40%;
+    box-sizing: border-box;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.modal_title{
+    width: 35%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.modal_summary{
+    width: 65%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    max-height: 220px;
+    overflow: scroll;
+}
