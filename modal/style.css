@@ -1,0 +1,13 @@
+.modal_container{
+    width: 600px;
+    height: 750px;
+    border: black 1px solid;
+}
+
+.book_cover{
+    border: black 1px solid;
+    margin: 10px;
+    width: 50%;
+    height: 700px;
+
+}
