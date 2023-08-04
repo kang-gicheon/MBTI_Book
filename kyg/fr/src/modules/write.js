@@ -13,6 +13,13 @@ const [
     WRITE_POST_SUCCESS,
     WRITE_POST_FAILURE
 ] = createRequestActionTypes('write/WRITE_POST'); //포스트 작성
+
+const [
+    UPDATE_POST,
+    UPDATE_POST_SUCCESS,
+    UPDATE_POST_FAILURE,
+] = createRequestActionTypes('write/UPDATE_POST'); //포스트 작성
+
 const SET_ORIGINAL_POST = 'write/SET_ORIGINAL_POST';
 
 
@@ -30,10 +37,23 @@ export const writePost = createAction(WRITE_POST, ({title, body, tags}) => ({
 
 export const setOriginalPost = createAction(SET_ORIGINAL_POST, post => post);
 
+export const updatePost = createAction(
+    UPDATE_POST,
+    ({id, title, body, tags}) => ({
+        id,
+        title,
+        body,
+        tags,
+    })
+)
+
 //시가 생성
 const writePostSaga = createRequestSaga(WRITE_POST, postsAPI.writePost);
+const updatePostSaga = createRequestSaga(UPDATE_POST, postsAPI.updatePost);
+
 export function* writeSaga() {
     yield takeLatest(WRITE_POST, writePostSaga);
+    yield takeLatest(UPDATE_POST, updatePostSaga);
 }
 
 
@@ -74,6 +94,14 @@ const write = handleActions(
             tags: post.tags,
             originalPostId: post._id,
           }),
+          [UPDATE_POST_SUCCESS]: (state, {payload: post})=> ({
+            ...state,
+            post,
+        }),
+        [UPDATE_POST_FAILURE]: (state, {payload: postError})=> ({
+            ...state,
+            postError,
+        }),
     },
     initialState,
 );

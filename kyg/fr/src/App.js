@@ -4,9 +4,15 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import WritePage from './pages/WritePage';
 import PostPage from './pages/PostPage';
+import {Helmet} from 'react-helmet-async'
+
 
 const App = () => {
   return (
+  <>
+    <Helmet>
+      <title>REACTERS</title>
+    </Helmet>
     <Routes>
       <Route path="/" element={<PostListPage />} />
       <Route path="/login" element={<LoginPage />} />
@@ -17,6 +23,7 @@ const App = () => {
         <Route path=":postId" element={<PostPage />} />
       </Route>
     </Routes>
+  </>
   );
 };
 export default App;
