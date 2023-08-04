@@ -1,5 +1,6 @@
-import styled, {css}from 'styled-components';
-import {Link} from 'react-router-dom'
+import React from 'react';
+import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
 import palette from '../../lib/styles/palette';
 
 const buttonStyle = css`
@@ -14,17 +15,17 @@ const buttonStyle = css`
 
   background: ${palette.gray[8]};
   &:hover {
-    background: ${palette[6]};
+    background: ${palette.gray[6]};
   }
 
   ${props =>
-  props.fullWidth && 
-  css`
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-    width: 100%;
-    font-size: 1.125rem;
-  `}
+    props.fullWidth &&
+    css`
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      width: 100%;
+      font-size: 1.125rem;
+    `}
 
   ${props =>
     props.cyan &&
@@ -34,25 +35,28 @@ const buttonStyle = css`
         background: ${palette.cyan[4]};
       }
     `}
+
+    &:disabled {
+    background: ${palette.gray[3]};
+    color: ${palette.gray[5]};
+    cursor: not-allowed;
+  }
 `;
 
 const StyledButton = styled.button`
-      ${buttonStyle}
+  ${buttonStyle}
 `;
 
 const StyledLink = styled(Link)`
-      ${buttonStyle}
+  ${buttonStyle}
 `;
-
 
 const Button = props => {
   return props.to ? (
-    <StyledLink {...props} cyan={props.cyan ? 1:0}/>
+    <StyledLink {...props} cyan={props.cyan ? 1 : 0} />
   ) : (
-    <StyledButton {...props}/>
+    <StyledButton {...props} />
   );
 };
-
-
 
 export default Button;

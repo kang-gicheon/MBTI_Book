@@ -7,7 +7,6 @@ import write, {writeSaga} from './write';
 import post, {postSaga} from './post'
 import posts, {postsSaga} from './posts'
 
-
 const rootReducer = combineReducers({
   auth,
   loading,
