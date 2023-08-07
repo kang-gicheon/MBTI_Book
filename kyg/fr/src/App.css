@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+.App {
+  font-family: "Cafe24Ssurround", "Cafe24SsurroundAir", "KOTRAHOPE";
+}
+
+@font-face {
+  font-family: "Cafe24Ssurround";
+  src: url(/src/assets/fonts/Cafe24Ssurround.ttf);
+}
+
+@font-face {
+  font-family: "Cafe24SsurroundAir";
+  src: url(/src/assets/fonts/Cafe24SsurroundAir.ttf);
+}
+
+@font-face {
+  font-family: "KOTRAHOPE";
+  src: url(/src/assets/fonts/KOTRA\ HOPE.ttf);
+}
+
+@font-face {
+  font-family: "NanumSquareNeo-Variable";
+  src: url(/src/assets/fonts/NanumSquareNeo-Variable.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 30px;
+}
+
