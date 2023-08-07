@@ -42,6 +42,12 @@ export const StyledContainer = styled.div`
   border-radius: 10px;
   box-sizing: border-box;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 20%
+
 `;
 
 export const StyledBtn = styled.button`
@@ -71,17 +77,20 @@ const App = () => {
 
 
     <Routes>
-    <Route path="/Home" element={<Home />} />
-    <Route path="/question" element={<Question />} />
-    <Route path="/result" element={<Result />} />
-    <Route path="/" element={<PostListPage />} />
-    <Route path="/login" element={<LoginPage />} />
-    <Route path="/register" element={<RegisterPage />} />
-    <Route path="/write" element={<WritePage />} />
-    <Route path="/:username">
-    <Route index element={<PostListPage />} />
-    <Route path=":postId" element={<PostPage />} />
-    </Route>
+
+      <Route path="/Home" element={<Home />} />
+      <Route path="/question" element={<Question />} />
+      <Route path="/result" element={<Result />} />
+      <Route path="/" element={<PostListPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
+      <Route path="/write" element={<WritePage />} />
+
+      <Route path="/:username">
+        <Route index element={<PostListPage />} />
+        <Route path=":postId" element={<PostPage />} />
+      </Route>
+
     </Routes>
 
 
