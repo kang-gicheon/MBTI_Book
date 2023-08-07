@@ -21,7 +21,7 @@ const Result = () => {
 
   return (
     <StyledContainer padding={"50px 10px"}>
-      <Header>나와 찰떡궁합인 반려견은?</Header>
+      <Header>나와 찰떡궁합인 도서는?</Header>
       <Title>
         {resultData.name && resultData.name.length < 6 ? (
           <>

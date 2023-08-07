@@ -1,7 +1,7 @@
 import React from "react";
 //css-in-js
 import styled from "styled-components";
-import MungImage from "../assets/mungmain.png";
+import mainlogo from "../assets/dog/mainlogo.png";
 import { useNavigate } from "react-router-dom";
 import { StyledContainer, StyledBtn } from "../App";
 import { FaArrowRight } from "react-icons/fa";
@@ -20,17 +20,17 @@ const Home = () => {
           <p className="dotPoint">찰떡궁합</p>
         </div>
         <div>
-          <p className="colorPoint">반려견</p>
-          <p>은?</p>
+          <p className="colorPoint">도서</p>
+          <p>는?</p>
         </div>
       </Header>
       <Contents>
         <LogoImage>
-          <img src={MungImage} alt="mungImage" width={250} />
+          <img src={mainlogo} alt="mungImage" width={150} ㅋ/>
         </LogoImage>
         <Desc>
           <p>MBTI 기반으로</p>
-          <p>나와 어울리는 반려견 찾기 🐶</p>
+          <p>나와 어울리는 도서 찾기 📖</p>
         </Desc>
         <StyledBtn onClick={handleClickBtn}>
           시작하기 <FaArrowRight />
