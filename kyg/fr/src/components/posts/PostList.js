@@ -8,18 +8,19 @@ import Tags from '../common/Tags';
 import { Link } from 'react-router-dom';
 
 const PostListBlock = styled(Responsive)`
-  margin-top: 3rem;
+  margin-top: 2rem;
+  
 `;
 
 const WritePostButtonWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 `;
 
 const PostItemBlock = styled.div`
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
   /* 맨 위 포스트는 padding-top 없음 */
   &:first-child {
     padding-top: 0;
