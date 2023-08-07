@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import Responsive from './Responsive';
 import Button from './Button';
 import {Link} from 'react-router-dom'
-import mainlogo from '../../assets/dog/mainlogo.png'
-import { screen } from '@testing-library/react';
+import main from '../../assets/dog/책 추천 메인 로고(3차 완성).png'
+
 
 const HeaderBlock = styled.div`
     position: fixed;
@@ -56,7 +56,7 @@ const Header = ({user, onLogout}) => {
           <HeaderBlock>
             <Wrapper>
                 <Link to="/" className="logo">
-                  <img  className="logo" src={mainlogo} alt='123'/>
+                <img src={main} alt='sad' width = '70px'/>
                     MBTI_BOOK
                 </Link>
                 {user ? (
