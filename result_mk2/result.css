@@ -10,11 +10,63 @@
     right: 0;
     top: 10%;
     padding: 25px;
+    display: flex;
+    flex-direction: row;
 }
 
-.mbti_book_icon{
-    border: black 1px solid;
+.mbti_book{
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     width: 50%;
-    height: 60%;
+    height: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.mbti_explain{
+    width: 100%;
+    height: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+/* mbti 스크롤바 속성 시작 */
+.mbti_explain::-webkit-scrollbar {
+    width: 10px;
+}
+.mbti_explain::-webkit-scrollbar-thumb {
+    background-color: #ff935c;
+  }
+.mbti_explain::-webkit-scrollbar-track {
+    background-color: #fdc2a4;
+  }
+  /* mbti 스크롤바 속성 끝 */
+
+
+.recommend_icon{
+    width: 100%;
+    height: 70%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.icon{
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+/* 동일 mbti 인물 설명 텝 속성 */
+.mbti_people{
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 50%;
+    height: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: 10px;
 }
