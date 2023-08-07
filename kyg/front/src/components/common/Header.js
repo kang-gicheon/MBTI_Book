@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import Responsive from './Responsive';
 import Button from './Button';
 import {Link} from 'react-router-dom'
+import main from '../../assets/dog/mainlogo.png'
+
 
 const HeaderBlock = styled.div`
     position: fixed;
@@ -14,15 +16,22 @@ const HeaderBlock = styled.div`
  * Responsive 컴포넌트의 속성에 스타일을 추가해서 새로운 컴포넌트 생성
  */
 const Wrapper = styled(Responsive)`
-    height: 4rem;
+    height: 6rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     .logo {
-        font-size: 1.125rem;
+        width: 80%;
+        font-size: 4rem;
         font-weight: 800;
         letter-spacing: 2px;
+        text-align: center;
     }
+    .center{
+        display: flex;
+        justify-items: center;
+    }
+
     .right {
         display: flex;
         align-items: center;
@@ -47,7 +56,8 @@ const Header = ({user, onLogout}) => {
           <HeaderBlock>
             <Wrapper>
                 <Link to="/" className="logo">
-                    REACTERS
+                <img src={main} alt='sad' width = '70px'/>
+                    MBTI_BOOK
                 </Link>
                 {user ? (
                 <div className='right'>
