@@ -8,14 +8,14 @@ import Tags from '../common/Tags';
 import { Link } from 'react-router-dom';
 
 const PostListBlock = styled(Responsive)`
-  margin-top: 2rem;
+  margin-top: 3em;
   
 `;
 
 const WritePostButtonWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 `;
 
 const PostItemBlock = styled.div`

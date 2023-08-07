@@ -72,7 +72,7 @@ const App = () => {
   <>
 
     <Helmet>
-      <title>REACTERS</title>
+      <title>MBTI</title>
     </Helmet>
 
 
