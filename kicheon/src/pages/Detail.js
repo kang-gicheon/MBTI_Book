@@ -42,8 +42,11 @@ const Detail = () => {
   );
 };
 
+<<<<<<< Updated upstream
 // 상세 페이지 바디 영역 
 
+=======
+>>>>>>> Stashed changes
 function Body() {
   return (
     <div className="body-test">
@@ -54,8 +57,11 @@ function Body() {
   );
 }
 
+<<<<<<< Updated upstream
 // 푸터 영역 작성
 
+=======
+>>>>>>> Stashed changes
 function Footer() {
   return (
     <div className="footer-test">
