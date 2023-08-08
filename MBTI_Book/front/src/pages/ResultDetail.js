@@ -25,9 +25,46 @@ const HoverText = styled.div`
   transition: opacity 0.3s ease;
 `;
 
+const imageArray = [
+
+    {
+        src: 'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791186089774.jpg',
+        alt: '',
+        title: '퍼스널트레이닝',
+        content: '이따 가슴운동 해야지'
+    },
+    {
+        src: 'https://www.hanbit.co.kr/data/books/B4861113361_l.jpg',
+        alt: '',
+        title: '이것이 자바다',
+        content: '자바를 왜 해'
+    },
+    {
+        src: 'https://image.aladin.co.kr/product/29694/74/cover500/e972530993_1.jpg',
+        alt: '',
+        title: '디자인 이렇게 하면 되나요',
+        content: '되겠냐 존나 어려운데'
+    },
+   
+];
+
 const Resultdetail = () => {
 
+    const [hoveredStates, setHoveredStates] = useState(imageArray.map(() => false));
+
     const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseEnter = (index) => {
+        const updatedStates = [...hoveredStates];
+        updatedStates[index] = true;
+        setHoveredStates(updatedStates);
+      };
+    
+      const handleMouseLeave = (index) => {
+        const updatedStates = [...hoveredStates];
+        updatedStates[index] = false;
+        setHoveredStates(updatedStates);
+      };
 
     return (
         <div className="container">
@@ -52,7 +89,7 @@ const Resultdetail = () => {
 
                         <HoverableImageContainer
                             onMouseEnter={() => setIsHovered(true)}
-                            onMouseLeave={() => setIsHovered(true)}>
+                            onMouseLeave={() => setIsHovered(false)}>
                             <img src='https://img.libbook.co.kr/V2/BookImgK15/9788954655972.gif' className="re_book_icon" alt=""/> 
                             <HoverText isHovered={isHovered}>
                                 책 이름임<br/>
@@ -61,15 +98,35 @@ const Resultdetail = () => {
                             </HoverText>
                         </HoverableImageContainer>
 
-                        <img src='https://img.libbook.co.kr/V2/BookImgK13/9788901258201.gif' className="re_book_icon" alt=""></img>
-                        <img src='https://thumbnail9.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/7b5d/6342e79c399009c238f4f14bdf709632cba9d08fea73854a407527b18d8a.jpg' className="re_book_icon" alt=""></img>
+                        <HoverableImageContainer
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}>
+                             <img src='https://img.libbook.co.kr/V2/BookImgK13/9788901258201.gif' className="re_book_icon" alt=""/>
+                            <HoverText isHovered={isHovered}>
+                                책 이름임<br/>
+                                책 장르임<br/>
+                                책 내용인데 뭐라 쓸지 모르겠으니 줄만 채워야징<br/>
+                            </HoverText>
+                        </HoverableImageContainer>
+
+                         <HoverableImageContainer
+                            onMouseEnter={() => setIsHovered(true)}
+                            onMouseLeave={() => setIsHovered(false)}>
+                            <img src='https://thumbnail9.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/7b5d/6342e79c399009c238f4f14bdf709632cba9d08fea73854a407527b18d8a.jpg' className="re_book_icon" alt=""/>
+                            <HoverText isHovered={isHovered}>
+                                책 이름임<br/>
+                                책 장르임<br/>
+                                책 내용인데 뭐라 쓸지 모르겠으니 줄만 채워야징<br/>
+                            </HoverText>
+                        </HoverableImageContainer>
+                        
                     </div>
                 </div>
                 <div className="recommend_list">
                     <div className="mbti_re_book_title">
                     </div>
                     <div className="re_book_list">
-                    <img src='https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791186089774.jpg' className="re_book_icon" alt="">
+                    {/* <img src='https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791186089774.jpg' className="re_book_icon" alt="">
 
                          
   
@@ -78,9 +135,24 @@ const Resultdetail = () => {
 
                     </img>
                     <img src='https://image.aladin.co.kr/product/29694/74/cover500/e972530993_1.jpg' className="re_book_icon" alt=""></img>
-                    </div>
-                </div>
+                    </div> */}
 
+                    {imageArray.map((image, index) => (
+                                <HoverableImageContainer
+                                    key={index}
+                                    onMouseEnter={() => handleMouseEnter(index)}
+                                    onMouseLeave={() => handleMouseLeave(index)}>
+                                    <img src={image.src} className="re_book_icon" alt=""/>
+                                    <HoverText isHovered={hoveredStates[index]}>
+                                    {image.title}<br/>
+                                    {image.genre}<br/>
+                                    {image.content}
+                                    </HoverText>
+                                </HoverableImageContainer>
+                                ))}
+
+                </div>
+            </div>
 
 
                 <h2>I들을 위한 추천 도서</h2>
