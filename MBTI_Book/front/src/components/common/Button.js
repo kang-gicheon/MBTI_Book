@@ -7,6 +7,7 @@ const buttonStyle = css`
   margin: 5px;
   border: none;
   border-radius: 4px;
+  font-family: Jua;
   font-size: 1rem;
   font-weight: bold;
   padding: 0.25rem 1rem;

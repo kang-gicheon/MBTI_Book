@@ -12,10 +12,10 @@ const HoverableImageContainer = styled.div`
 
 const HoverText = styled.div`
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   width: 150px;
-  height: 150px;
+  height: 200px;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
@@ -39,7 +39,7 @@ const imageArray1 = [
         content: '코로나 사태로 높아진 서로의 벽, 우린 고립되어 가고있다.'
     },
     {
-        src: 'https://thumbnail9.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/7b5d/6342e79c399009c238f4f14bdf709632cba9d08fea73854a407527b18d8a.jpg',
+        src: 'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190298315.jpg',
         alt: '',
         title: '셜록 홈즈 - 바스커빌 가의 개',
         content: '추리 소설을 좋아한다면 한번쯤은 들어본 셜록 홈즈의 시리즈 중 하나, 과연 전설 속의 마녀 개는 존재하는 것인가? 시시각각 엄습하는 죽음의 공포 속에서 홈즈의 숨 막히는 결전이 펼쳐진다.'
@@ -73,7 +73,7 @@ const imageArray2 = [
 const imageArray3 = [
 
     {
-        src: 'https://qi-b.qoo10cdn.com/partner/goods_image/1/9/8/8/354831988g.jpg',
+        src: 'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791164455874.jpg',
         alt: '',
         title: 'WINNEIE-THE-POOH',
         content: '오래전 수많은 사람에게 큰 감동을 주고 삶과 가치관을 변화시켰던 그때 그 책을 선물처럼 다시 만나보자..'
