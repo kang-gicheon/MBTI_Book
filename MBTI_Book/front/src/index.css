@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -8,10 +10,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box; /*엘리먼트의 box-sizing 값을 border-box로 설정*/
   min-height: 100%;
+  font-family: Jua;
 }
 
 #root{
   min-height: 100%;
+  
 }
 
 /* 추후 회원 인증 페이지에서
