@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { StyledContainer, StyledBtn } from "../App";
 import { FaArrowRight } from "react-icons/fa";
 
+
 const Home = () => {
   const navigate = useNavigate();
   const handleClickBtn = () => {
@@ -44,7 +45,7 @@ export default Home;
 
 const Header = styled.div`
   font-size: 1.35rem;
-  font-family: "Cafe24Ssurround";
+  font-family: "Jua";
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,11 +86,12 @@ const Contents = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "NanumSquareNeo-Variable";
+  font-family: "Jua";
+
 `;
 
 const Desc = styled.div`
-  font-size: 0.6rem;
+  font-size: 20px;
   font-weight: 700;
   margin: 30px;
   text-align: center;

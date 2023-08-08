@@ -53,7 +53,7 @@ export const StyledContainer = styled.div`
 
 export const StyledBtn = styled.button`
   display: block;
-  font-family: "Cafe24Ssurround";
+  font-family: "Jua";
   background-color: #ff935c;
   color: #fff;
   font-size: 0.85rem;

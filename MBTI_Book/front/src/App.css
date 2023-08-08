@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
 .App {
   text-align: center;
 }
@@ -38,10 +40,11 @@
 }
 
 .App {
-  font-family: "Cafe24Ssurround", "Cafe24SsurroundAir", "KOTRAHOPE";
+   font-family: "Jua"; 
+
 }
 
-@font-face {
+/* @font-face {
   font-family: "Cafe24Ssurround";
   src: url(/src/assets/fonts/Cafe24Ssurround.ttf);
 }
@@ -61,9 +64,10 @@
   src: url(/src/assets/fonts/NanumSquareNeo-Variable.woff) format("woff");
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 html {
   font-size: 30px;
+  font-family: "Jua"; 
 }
 

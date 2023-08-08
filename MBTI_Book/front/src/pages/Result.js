@@ -10,6 +10,8 @@ import Button from '../../src/components/common/Button'
 
 
 
+
+
 const Result = () => {
   const [searchParams] = useSearchParams();
   const mbti = searchParams.get("mbti").toUpperCase();
@@ -76,10 +78,10 @@ export default Result;
 
 const Header = styled.div`
   display: block;
-  font-family: "NanumSquareNeo-Variable";
+  font-family: "Jua";
   background-color: #ff935c;
   color: #fff;
-  font-size: 0.6rem;
+  font-size: 15px;
   border: 0;
   border-radius: 15px;
   height: 30px;
@@ -96,7 +98,7 @@ const Title = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-family: "Cafe24Ssurround";
+  font-family: "Jua";
   margin: 10px auto;
 
   p {
@@ -196,8 +198,8 @@ const Contents = styled.div`
 `;
 
 const Desc = styled.div`
-  font-family: "NanumSquareNeo-Variable";
-  font-size: 0.55rem;
+  font-family: "Jua";
+  font-size: 15px;
   text-align: center;
   margin-top: 20px;
 
@@ -212,7 +214,7 @@ const Desc = styled.div`
     align-items: center;
 
     .pointText {
-      font-size: 0.6rem;
+      font-size: 14px;
       font-weight: 700;
       margin-left: 5px;
       color: #dc5353;
@@ -220,7 +222,7 @@ const Desc = styled.div`
 
     .dotText {
       text-emphasis: "♥︎" #dc5353;
-      font-size: 0.6rem;
+      font-size: 15px;
       margin-bottom: 9px;
       margin-right: 3px;
       text-decoration-line: underline;

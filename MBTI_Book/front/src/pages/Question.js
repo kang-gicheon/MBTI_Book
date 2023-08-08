@@ -99,7 +99,7 @@ export default Question;
 const Title = styled.div`
   font-size: 15pt;
   text-align: center;
-  font-family: "NanumSquareNeo-Variable";
+  font-family: "Jua";
   margin-top: 50px;
   margin-bottom: 20px;
   display: flex;
@@ -117,7 +117,7 @@ const ButtonGroup = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: "NanumSquareNeo-Variable";
+  font-family: "Jua";
 
   .answerBtn {
     font-size: 18px;
@@ -126,6 +126,7 @@ const ButtonGroup = styled.div`
     background-color: #ff935c;
     border: none;
     min-width: 100%;
+    font-family: "Jua";
 
     &:hover {
       background-color: #ff935c;
