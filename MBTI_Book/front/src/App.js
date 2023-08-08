@@ -8,6 +8,7 @@ import {Helmet} from 'react-helmet-async';
 import Home from './pages/Home';
 import Question from './pages/Question';
 import Result from './pages/Result';
+import Resultdetail from './pages/ResultDetail'
 
 import styled, { createGlobalStyle } from "styled-components";
 
@@ -85,6 +86,7 @@ const App = () => {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/write" element={<WritePage />} />
+      <Route path='/Resultdetail' element={<Resultdetail/>}/>
 
       <Route path="/:username">
         <Route index element={<PostListPage />} />

@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import { ResultData } from "../assets/data/resultData";
 import { StyledContainer } from "../App";
 import { BsFillSuitHeartFill } from "react-icons/bs";
+import Resultdetail from "./ResultDetail";
 import Button from '../../src/components/common/Button'
 
 
@@ -63,7 +64,8 @@ const Result = () => {
             <p className="dotText">찰떡궁합</p>
             <p>입니다.</p>
           </div>
-          <Button to="/">home</Button> 
+          <Button to="/Resultdetail">결과 상세보기</Button> 
+          <Button to="/">홈으로 이동</Button> 
         </Desc>
       </Contents>
     </StyledContainer>

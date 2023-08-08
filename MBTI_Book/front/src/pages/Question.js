@@ -125,7 +125,7 @@ const ButtonGroup = styled.div`
     padding: 20px;
     background-color: #ff935c;
     border: none;
-    min-width: 90%;
+    min-width: 100%;
 
     &:hover {
       background-color: #ff935c;

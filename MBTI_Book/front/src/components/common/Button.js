@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import palette from '../../lib/styles/palette';
 
 const buttonStyle = css`
+  margin: 5px;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
@@ -12,7 +13,9 @@ const buttonStyle = css`
   color: white;
   outline: none;
   cursor: pointer;
-
+  min-width: 10px;
+  width: 110px;
+  text-align: center;
   background: ${palette.gray[8]};
   &:hover {
     background: ${palette.gray[6]};
