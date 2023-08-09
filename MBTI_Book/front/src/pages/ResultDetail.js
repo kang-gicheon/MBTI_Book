@@ -1,6 +1,7 @@
 import './Resultdetail.css'
 import { useState } from 'react';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom'
 
 
 const HoverableImageContainer = styled.div`
@@ -297,12 +298,16 @@ const Resultdetail = () => {
                                 </HoverableImageContainer>
                                 ))}
 
+                 
+            
+
 
                     {/* <img src='https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788972756194.jpg' className="re_book_icon" alt=""></img>
                     <img src='https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791191891287.jpg' className="re_book_icon" alt=""></img>
                     <img src='https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788950964764.jpg' className="re_book_icon" alt=""></img> */}
                     </div>
                 </div>
+                <Link to="/">메인화면</Link>
                 {/* Repeat the above structure for other recommend_list sections */}
                 {/* Add homepage button */}
             </div>

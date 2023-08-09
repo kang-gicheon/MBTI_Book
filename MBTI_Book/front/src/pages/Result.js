@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 //css-in-js
-import styled from "styled-components";
-import { useSearchParams } from "react-router-dom";
-import { ResultData } from "../assets/data/resultData";
-import { StyledContainer } from "../App";
 import { BsFillSuitHeartFill } from "react-icons/bs";
-import Resultdetail from "./ResultDetail";
-import Button from '../../src/components/common/Button'
+import { Link, useSearchParams } from "react-router-dom";
+import styled from "styled-components";
+import Button from '../../src/components/common/Button';
+import { StyledContainer } from "../App";
+import { ResultData } from "../assets/data/resultData";
+
 
 
 
@@ -24,8 +24,12 @@ const Result = () => {
   }, [mbti]);
 
   return (
+    <>
     <StyledContainer padding={"50px 10px"}>
+
       <Header>나와 찰떡궁합인 도서는?</Header>
+
+      
       <Title>
         {resultData.name && resultData.name.length < 6 ? (
           <>
@@ -66,11 +70,15 @@ const Result = () => {
             <p className="dotText">찰떡궁합</p>
             <p>입니다.</p>
           </div>
+          <br/>
+          
           <Button to="/Resultdetail">결과 상세보기</Button> 
-          <Button to="/">홈으로 이동</Button> 
+          <Button to="/">홈으로 이동</Button> <br/><br/>
+          <Link to="/Home" >다시하기</Link>
         </Desc>
       </Contents>
     </StyledContainer>
+    </>
   );
 };
 
@@ -92,6 +100,8 @@ const Header = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+
 
 const Title = styled.div`
   display: flex;
