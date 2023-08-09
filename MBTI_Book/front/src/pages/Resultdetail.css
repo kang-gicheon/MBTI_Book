@@ -1,6 +1,8 @@
 body{
     margin: 0 auto;
     padding: 40px;
+    background-image: url('./night1.jpg');
+    height: 100%;
 }
 
 .E_style{
@@ -11,7 +13,7 @@ body{
 
 .I_style{
     font-size: 35px;
-    color: rgb(41, 41, 255);
+    color: rgb(22, 168, 54);
     margin: 8px;
 }
 
@@ -19,6 +21,7 @@ body{
     margin: 0;
     display: flex;
     flex-direction: column;
+    background-color: white;
     width: 1200px;
     height: 2000px;
     border-radius: 10px;

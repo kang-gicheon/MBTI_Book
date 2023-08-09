@@ -9,8 +9,8 @@ import Home from './pages/Home';
 import Question from './pages/Question';
 import Result from './pages/Result';
 import Resultdetail from './pages/ResultDetail'
-
 import styled, { createGlobalStyle } from "styled-components";
+
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -47,7 +47,8 @@ export const StyledContainer = styled.div`
   margin: 0 auto;
   left: 0;
   right: 0;
-  top: 20%
+  top: 20%;
+
 
 `;
 
