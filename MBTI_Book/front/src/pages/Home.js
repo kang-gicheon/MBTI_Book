@@ -5,6 +5,7 @@ import mainlogo from "../assets/dog/mainlogo.png";
 import { useNavigate } from "react-router-dom";
 import { StyledContainer, StyledBtn } from "../App";
 import { FaArrowRight } from "react-icons/fa";
+import morning from "./morning.jpg";
 
 
 const Home = () => {
@@ -13,7 +14,12 @@ const Home = () => {
     navigate("/question");
   };
 
+  
+
+
+
   return (
+    <AuthTemplateBlock>
     <StyledContainer padding={"50px"}>
       <Header>
         <div>
@@ -38,10 +44,29 @@ const Home = () => {
         </StyledBtn>
       </Contents>
     </StyledContainer>
+    </AuthTemplateBlock>
   );
 };
 
 export default Home;
+
+
+const AuthTemplateBlock = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  /** flex로 내부 내용 중앙 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(${morning});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+`;  
+
 
 const Header = styled.div`
   font-size: 1.35rem;

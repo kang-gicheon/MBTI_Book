@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import palette from './../../lib/styles/palette';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import bg from './bg2.jpg';
+
+// import {test} from '../../assets/loginbg/prince.png'
 
 /**
  * 회원가입/로그인 페이지의 레이아웃을 담당하는 컴포넌트
@@ -18,7 +21,10 @@ const AuthTemplateBlock = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
+  background-image: url(${bg});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+`;  
 
 const WhiteBox = styled.div`
   .logo-area {
@@ -31,15 +37,16 @@ const WhiteBox = styled.div`
   box-shadow: 0 0 8px rgba(0,0,0, 0.025);
   padding: 2rem;
   width: 360px;
+  height: 380px;
   background: white;
   border-radius: 2px;
-`
+`;
 
 const AuthTemplate = ({children}) => {
   return <AuthTemplateBlock>
     <WhiteBox>
       <div className="logo-area">
-        <Link to ="/">REACTERS</Link>
+        <Link to ="/">MBTI-BOOK</Link>
       </div>
       {children}
     </WhiteBox>

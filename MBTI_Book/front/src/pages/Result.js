@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 //css-in-js
-import styled from "styled-components";
-import { useSearchParams } from "react-router-dom";
-import { ResultData } from "../assets/data/resultData";
-import { StyledContainer } from "../App";
 import { BsFillSuitHeartFill } from "react-icons/bs";
-import Resultdetail from "./ResultDetail";
-import Button from '../../src/components/common/Button'
+import { Link, useSearchParams } from "react-router-dom";
+import styled from "styled-components";
+import Button from '../../src/components/common/Button';
+import { StyledContainer } from "../App";
+import { ResultData } from "../assets/data/resultData";
+import night from './realafternoon.jpg'
 
 
 
@@ -24,8 +24,13 @@ const Result = () => {
   }, [mbti]);
 
   return (
+    <>
+    <AuthTemplateBlock>
     <StyledContainer padding={"50px 10px"}>
+
       <Header>나와 찰떡궁합인 도서는?</Header>
+
+      
       <Title>
         {resultData.name && resultData.name.length < 6 ? (
           <>
@@ -66,15 +71,36 @@ const Result = () => {
             <p className="dotText">찰떡궁합</p>
             <p>입니다.</p>
           </div>
+          <br/>
+          
           <Button to="/Resultdetail">결과 상세보기</Button> 
-          <Button to="/">홈으로 이동</Button> 
+          <Button to="/">홈으로 이동</Button> <br/><br/>
+          <Link to="/Home" >다시 하고 싶다면?</Link>
         </Desc>
       </Contents>
     </StyledContainer>
+    </AuthTemplateBlock>
+    </>
   );
 };
 
 export default Result;
+
+const AuthTemplateBlock = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  /** flex로 내부 내용 중앙 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(${night});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+`;  
 
 const Header = styled.div`
   display: block;
@@ -92,6 +118,8 @@ const Header = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+
 
 const Title = styled.div`
   display: flex;

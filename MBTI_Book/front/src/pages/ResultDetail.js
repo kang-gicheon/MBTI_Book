@@ -1,6 +1,7 @@
 import './Resultdetail.css'
 import { useState } from 'react';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom'
 
 
 const HoverableImageContainer = styled.div`
@@ -23,25 +24,26 @@ const HoverText = styled.div`
   border-radius: 5px;
   opacity: ${props => (props.isHovered ? 1 : 0)};
   transition: opacity 0.3s ease;
+  overflow: auto;
 `;
 
 const imageArray1 = [
     {
         src: 'https://img.libbook.co.kr/V2/BookImgK15/9788954655972.gif',
         alt: '',
-        title: '여행의 이유',
+        title: '여행의 이유 - 김영하',
         content: '왜 문 밖으로 나가야 하는지 이유를 모르는 당신을 위한 도서'
     },
     {
         src: 'https://img.libbook.co.kr/V2/BookImgK13/9788901258201.gif',
         alt: '',
-        title: '그럴수록 우리에겐 친구가 필요하다',
+        title: '그럴수록 우리에겐 친구가 필요하다 - 이름트라우트',
         content: '코로나 사태로 높아진 서로의 벽, 우린 고립되어 가고있다.'
     },
     {
         src: 'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791190298315.jpg',
         alt: '',
-        title: '셜록 홈즈 - 바스커빌 가의 개',
+        title: '셜록 홈즈:바스커빌 가의 개 - 아서 코난 도일',
         content: '추리 소설을 좋아한다면 한번쯤은 들어본 셜록 홈즈의 시리즈 중 하나, 과연 전설 속의 마녀 개는 존재하는 것인가? 시시각각 엄습하는 죽음의 공포 속에서 홈즈의 숨 막히는 결전이 펼쳐진다.'
     },
 
@@ -52,22 +54,22 @@ const imageArray2 = [
     {
         src: 'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791186089774.jpg',
         alt: '',
-        title: '퍼스널트레이닝',
-        content: 'PT는 퍼스널 트레이닝의 약자입니다.'
+        title: '퍼스널트레이닝 - NASM',
+        content: 'PT는 퍼스널 트레이닝의 약자입니다. PT를 통해서 약자에서 강자로 다시 태어나 보세요.'
     },
     {
         src: 'https://www.hanbit.co.kr/data/books/B4861113361_l.jpg',
         alt: '',
-        title: '이것이 자바다',
+        title: '이것이 자바다 - 신용권',
         content: '자바에 대해 알고싶은 당신. Java A-Z를 알려드립니다.'
     },
     {
         src: 'https://image.aladin.co.kr/product/29694/74/cover500/e972530993_1.jpg',
         alt: '',
-        title: '디자인 이렇게 하면 되나요',
-        content: '라는 질문을 하기전에 이 책을 읽어보자.'
+        title: '디자인 이렇게 하면 되나요 - 오자와 하야토',
+        content: '라는 질문을 하기 전에 이 책을 읽어보자. 디자인의 기본 실무, 작업과정부터 레이아웃, 인쇄 제작 등 많은 정보가 기다린다.'
     },
-   
+
 ];
 
 const imageArray3 = [
@@ -75,13 +77,13 @@ const imageArray3 = [
     {
         src: 'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791164455874.jpg',
         alt: '',
-        title: 'WINNEIE-THE-POOH',
-        content: '오래전 수많은 사람에게 큰 감동을 주고 삶과 가치관을 변화시켰던 그때 그 책을 선물처럼 다시 만나보자..'
+        title: 'WINNEIE-THE-POOH - 앨런 알렉산더 밀른',
+        content: '“난 항상 그 자리에 있을게. 언제라도 놀러와.” 어른이 되면서 추방되었던 어린이의 세계’에 대한 향수를 자극하는 동화, 어린아이 뿐만 아니라 어른에게도 부족하지 않은 동화'
     },
     {
-        src: 'https://image.aladin.co.kr/product/2682/7/cover500/0345539435_1.jpg',
+        src: 'https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788983711892.jpg',
         alt: '',
-        title: '코스모스',
+        title: '코스모스 - 칼 세이건',
         content: '과학의 탐험가들이 개척해 놓은 길을 따라가며 과거, 현재, 미래의 과학이 이뤘고, 이루고 있으며, 앞으로 이룰 성과들을 알기 쉽게 풀이해 들려준다.'
     },
     {
@@ -90,7 +92,7 @@ const imageArray3 = [
         title: '예술이 어떻게 사람과 사회를 변화시키는가?',
         content: ' 예술이 일반 사회, 지역 공동체, 집단적 삶에 얼마나 좋은 영향을 미치는가를 소개하고, 폭력과 약물중독에서 자유로워지게 하며, 개개인이 안고 있는 정신적, 정서적 문제나 트러블을 치유하는 데 예술이 어떤 기능을 할 수 있는지 제시한다.'
     },
-   
+
 ];
 
 const imageArray4 = [
@@ -113,7 +115,7 @@ const imageArray4 = [
         title: '마시멜로 이야기',
         content: '오늘의 기쁨에만 집중해서 살아온 독자들에게 ‘평범한 오늘을 특별한 내일’로 만드는 법을 전한다.'
     },
-   
+
 ];
 
 const Resultdetail = () => {
@@ -179,6 +181,7 @@ const Resultdetail = () => {
 
 
     return (
+    <div className='Background'>
         <div className="container">
             <div className="result_container">
 
@@ -193,7 +196,7 @@ const Resultdetail = () => {
                 <br/><br/>
             
 
-                <h2>E들을 위한 추천 도서</h2>
+                <h2><span className='E_style'>E</span>를 위한 추천 도서</h2>
                 <div className="recommend_list">
                     <div className="mbti_re_book_title">
                     </div>
@@ -251,7 +254,7 @@ const Resultdetail = () => {
             </div>
 
 
-                <h2>I들을 위한 추천 도서</h2>
+            <h2><span className='I_style'>I</span>를 위한 추천 도서</h2>
                 <div className="recommend_list">
                     <div className="mbti_re_book_title">
                     </div>
@@ -297,15 +300,20 @@ const Resultdetail = () => {
                                 </HoverableImageContainer>
                                 ))}
 
+                 
+            
+
 
                     {/* <img src='https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788972756194.jpg' className="re_book_icon" alt=""></img>
                     <img src='https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791191891287.jpg' className="re_book_icon" alt=""></img>
                     <img src='https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788950964764.jpg' className="re_book_icon" alt=""></img> */}
                     </div>
                 </div>
+                <Link to="/">메인화면</Link>
                 {/* Repeat the above structure for other recommend_list sections */}
                 {/* Add homepage button */}
             </div>
+        </div>
         </div>
     );
 };

@@ -4,6 +4,7 @@ import { createSearchParams, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { StyledContainer } from "../App";
 import { QuestionData } from "../assets/data/questiondata";
+import after from './afternoon.jpg'
 
 const Question = () => {
   const navigate = useNavigate();
@@ -46,6 +47,7 @@ const Question = () => {
   };
 
   return (
+    <AuthTemplateBlock>
     <StyledContainer padding={"50px"}>
       <ProgressBar
         striped
@@ -91,10 +93,28 @@ const Question = () => {
         </Button>
       </ButtonGroup>
     </StyledContainer>
+    </AuthTemplateBlock>
   );
 };
 
 export default Question;
+
+const AuthTemplateBlock = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  /** flex로 내부 내용 중앙 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(${after});
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+`;  
+
 
 const Title = styled.div`
   font-size: 15pt;

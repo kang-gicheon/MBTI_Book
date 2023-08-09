@@ -14,6 +14,8 @@ const palette = {
     '#212529',
   ],
   cyan: [
+    '#ff935c',
+    "#FF4646",
     '#e3fafc',
     '#c5f6fa',
     '#99e9f2',

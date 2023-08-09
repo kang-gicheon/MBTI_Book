@@ -10,14 +10,14 @@ const buttonStyle = css`
   font-family: Jua;
   font-size: 1rem;
   font-weight: bold;
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   color: white;
   outline: none;
   cursor: pointer;
   min-width: 10px;
   width: 110px;
   text-align: center;
-  background: ${palette.gray[8]};
+  background: ${palette.cyan[0]};
   &:hover {
     background: ${palette.gray[6]};
   }
@@ -34,9 +34,9 @@ const buttonStyle = css`
   ${props =>
     props.cyan &&
     css`
-      background: ${palette.cyan[5]};
+      background: ${palette.cyan[1]};
       &:hover {
-        background: ${palette.cyan[4]};
+        background: ${palette.cyan[0]};
       }
     `}
 
