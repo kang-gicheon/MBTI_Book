@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
-import {Link} from 'react-router-dom';
 import palette from "../../lib/styles/palette";
 import Button from './../common/Button';
+import { useNavigate } from 'react-router-dom';
 
 /**
  * 회원가입 또는 로그인 폼을 보여준다.
@@ -69,8 +70,20 @@ const ErroMessage = styled.div`
   margin-top: 1rem
 `;
 
+const StyledLink = styled.a`
+  text-align: left;
+  margin-left: 0;
+`;
+
 const AuthForm = ({type, form, onChange, onSubmit, error}) => {
   const text = textMap[type];
+
+    const navigate = useNavigate();
+  
+    const handleClick = () => {
+      navigate('/')
+    }
+  
   return <AuthFormBlock>
     <h3>{text}</h3>
     <form onSubmit={onSubmit}>
@@ -103,6 +116,8 @@ const AuthForm = ({type, form, onChange, onSubmit, error}) => {
       <ButtonWithMarginTop cyan fullWidth={{marginTop: '1rem'}}>{text}</ButtonWithMarginTop>
     </form>
     <Footer>
+      {/* 누를시 홈으로 이동 */}
+      <StyledLink onClick={handleClick}>홈으로 돌아가기</StyledLink>
       {type === 'login' ? (
          <Link to="/register">회원가입</Link>
       ) : (
