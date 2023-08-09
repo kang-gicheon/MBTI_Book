@@ -2,6 +2,19 @@ body{
     margin: 0 auto;
     padding: 40px;
 }
+
+.E_style{
+    font-size: 35px;
+    color: rgb(255, 0, 0);
+    margin: 8px;
+}
+
+.I_style{
+    font-size: 35px;
+    color: rgb(41, 41, 255);
+    margin: 8px;
+}
+
 .container{
     margin: 0;
     display: flex;
