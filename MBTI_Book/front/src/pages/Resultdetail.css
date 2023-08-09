@@ -1,8 +1,10 @@
 body{
     margin: 0 auto;
-    padding: 40px;
+
+}
+
+.Background{
     background-image: url('./night1.jpg');
-    height: 100%;
 }
 
 .E_style{

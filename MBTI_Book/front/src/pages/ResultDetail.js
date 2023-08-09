@@ -181,7 +181,7 @@ const Resultdetail = () => {
 
 
     return (
-        
+    <div className='Background'>
         <div className="container">
             <div className="result_container">
 
@@ -313,6 +313,7 @@ const Resultdetail = () => {
                 {/* Repeat the above structure for other recommend_list sections */}
                 {/* Add homepage button */}
             </div>
+        </div>
         </div>
     );
 };
