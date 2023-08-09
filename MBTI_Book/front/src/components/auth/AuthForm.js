@@ -43,7 +43,7 @@ const Footer = styled.div`
   text-align: right;
   a {
     color: ${palette.gray[6]};
-    text-decoration: underline;
+    text-decoration: none;
     &:hover {
       color: ${palette.gray[9]};
     }
@@ -117,7 +117,7 @@ const AuthForm = ({type, form, onChange, onSubmit, error}) => {
     </form>
     <Footer>
       {/* 누를시 홈으로 이동 */}
-      <StyledLink onClick={handleClick}>홈으로 돌아가기</StyledLink>
+      <StyledLink onClick={handleClick}>홈으로 돌아가기  </StyledLink>
       {type === 'login' ? (
          <Link to="/register">회원가입</Link>
       ) : (
