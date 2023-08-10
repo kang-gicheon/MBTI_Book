@@ -1,7 +1,8 @@
 import './Resultdetail.css'
 import { useState } from 'react';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import {Banner} from './banner.png';
 
 
 const HoverableImageContainer = styled.div`
@@ -26,6 +27,13 @@ const HoverText = styled.div`
   transition: opacity 0.3s ease;
   overflow: auto;
 `;
+
+const Bannertest = styled.div`
+
+    
+
+`;
+
 
 const imageArray1 = [
     {
@@ -184,7 +192,9 @@ const Resultdetail = () => {
     <div className='Background'>
         <div className="container">
             <div className="result_container">
-
+               <Bannertest>
+               {Banner}
+               </Bannertest>
             </div>
 
 

@@ -44,6 +44,7 @@ body{
     display: flex;
     flex-direction: row;
     margin: 20px;
+    background-image: url('./banner.png');
 
 }
 

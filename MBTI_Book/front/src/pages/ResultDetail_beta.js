@@ -2,7 +2,6 @@ import './Resultdetail.css'
 import { useState } from 'react';
 import styled from 'styled-components';
 
-
 const HoverableImageContainer = styled.div`
   display: inline-block;
   position: relative;
@@ -182,7 +181,7 @@ const Resultdetail = () => {
     return (
         <div className="container">
             <div className="result_container">
-
+  
             </div>
 
 
