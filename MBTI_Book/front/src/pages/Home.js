@@ -33,7 +33,7 @@ const Home = () => {
       </Header>
       <Contents>
         <LogoImage>
-          <img src={mainlogo} alt="mungImage" width={150} ㅋ/>
+          <img src={mainlogo} alt="mungImage" width={150}/>
         </LogoImage>
         <Desc>
           <p>MBTI 기반으로</p>

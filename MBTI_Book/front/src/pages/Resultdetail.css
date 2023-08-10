@@ -44,6 +44,7 @@ body{
     display: flex;
     flex-direction: row;
     margin: 20px;
+    background-image: url('./banner.png');
 
 }
 
@@ -117,6 +118,10 @@ body{
     flex-direction: column;
 }
 
+.h2_title{
+    font-size: 1.5em;
+}
+
 .recommend_list{
     width: 97%;
     height: 270px;
@@ -126,6 +131,7 @@ body{
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+    background-image: url('./bookholder.png');
 }
 
 .mbti_re_book_title{
@@ -141,7 +147,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 20px;
+    padding: 10px;
 
 }
 

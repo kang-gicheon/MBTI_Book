@@ -1,7 +1,8 @@
 import './Resultdetail.css'
 import { useState } from 'react';
 import styled from 'styled-components';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+
 
 
 const HoverableImageContainer = styled.div`
@@ -26,6 +27,8 @@ const HoverText = styled.div`
   transition: opacity 0.3s ease;
   overflow: auto;
 `;
+
+
 
 const imageArray1 = [
     {
@@ -184,13 +187,10 @@ const Resultdetail = () => {
     <div className='Background'>
         <div className="container">
             <div className="result_container">
-
             </div>
-
-
-
+            
             <div className="recommend_container">
-                <h1>mbti를 위한 추천도서</h1>
+                <h1><span style={{color:'rgba(182, 15, 204, 0.849)', marginRight:'3px'}}>M</span><span style={{color:'blue', marginRight:'3px'}}>B</span><span style={{color:'green', marginRight:'3px'}}>T</span><span style={{color:'red', marginRight:'3px'}}>I</span>를 위한 추천도서</h1>
                 
 
                 <br/><br/>
@@ -198,10 +198,9 @@ const Resultdetail = () => {
 
                 <h2><span className='E_style'>E</span>를 위한 추천 도서</h2>
                 <div className="recommend_list">
-                    <div className="mbti_re_book_title">
-                    </div>
-                    <div className="re_book_list">
 
+                    <div className="re_book_list">
+                   
                     {imageArray1.map((image, index) => (
                                 <HoverableImageContainer
                                     key={index}
@@ -215,26 +214,15 @@ const Resultdetail = () => {
                                     </HoverText>
                                 </HoverableImageContainer>
                                 ))}
-
+                                
+                    
                         
                     </div>
                 </div>
 
                 <div className="recommend_list">
-                    <div className="mbti_re_book_title">
-                    </div>
+
                     <div className="re_book_list">
-                        
-                    {/* <img src='https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791186089774.jpg' className="re_book_icon" alt="">
-
-                         
-  
-                    </img>
-                    <img src='https://www.hanbit.co.kr/data/books/B4861113361_l.jpg' className="re_book_icon" alt="">
-
-                    </img>
-                    <img src='https://image.aladin.co.kr/product/29694/74/cover500/e972530993_1.jpg' className="re_book_icon" alt=""></img>
-                    </div> */}
 
                     {imageArray2.map((image, index) => (
                                 <HoverableImageContainer
@@ -256,8 +244,7 @@ const Resultdetail = () => {
 
             <h2><span className='I_style'>I</span>를 위한 추천 도서</h2>
                 <div className="recommend_list">
-                    <div className="mbti_re_book_title">
-                    </div>
+
                     <div className="re_book_list">
                     {imageArray3.map((image, index) => (
                                 <HoverableImageContainer
@@ -282,8 +269,7 @@ const Resultdetail = () => {
                     </div>
                 </div>
                 <div className="recommend_list">
-                    <div className="mbti_re_book_title">
-                    </div>
+
                     <div className="re_book_list">
 
                     {imageArray4.map((image, index) => (
@@ -304,9 +290,6 @@ const Resultdetail = () => {
             
 
 
-                    {/* <img src='https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788972756194.jpg' className="re_book_icon" alt=""></img>
-                    <img src='https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9791191891287.jpg' className="re_book_icon" alt=""></img>
-                    <img src='https://contents.kyobobook.co.kr/sih/fit-in/458x0/pdt/9788950964764.jpg' className="re_book_icon" alt=""></img> */}
                     </div>
                 </div>
                 <Link to="/">메인화면</Link>

@@ -39,6 +39,7 @@ const StyledInput = styled.input`
  * 폼 하단에 로그인 혹은 회원가입 링크를 보여줌
  */
 const Footer = styled.div`
+  
   margin-top: 1rem;
   text-align: right;
   a {
@@ -73,6 +74,7 @@ const ErroMessage = styled.div`
 const StyledLink = styled.a`
   text-align: left;
   margin-left: 0;
+  
 `;
 
 const AuthForm = ({type, form, onChange, onSubmit, error}) => {
@@ -117,7 +119,11 @@ const AuthForm = ({type, form, onChange, onSubmit, error}) => {
     </form>
     <Footer>
       {/* 누를시 홈으로 이동 */}
+<<<<<<< HEAD
       <StyledLink onClick={handleClick}>홈으로 돌아가기  </StyledLink>
+=======
+      <StyledLink onClick={handleClick}>홈으로 돌아가기</StyledLink><br/>
+>>>>>>> dev(result2)
       {type === 'login' ? (
          <Link to="/register">회원가입</Link>
       ) : (
