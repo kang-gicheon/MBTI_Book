@@ -2,7 +2,6 @@ import './Resultdetail.css'
 import { useState } from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-import {Banner} from './banner.png';
 
 
 const HoverableImageContainer = styled.div`
@@ -192,13 +191,8 @@ const Resultdetail = () => {
     <div className='Background'>
         <div className="container">
             <div className="result_container">
-               <Bannertest>
-               {Banner}
-               </Bannertest>
             </div>
-
-
-
+            
             <div className="recommend_container">
                 <h1>mbti를 위한 추천도서</h1>
                 

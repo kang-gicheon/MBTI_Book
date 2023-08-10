@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import client from '../lib/api/client';
-
+import styled from 'styled-components';
 
 
 // 대화를 저장하기 위한 배열
@@ -14,7 +14,7 @@ let conversation = [
 const sendMessageToGpt = async (userMessage) => {
   conversation.push({ role: 'user', content: userMessage });
 
-  const api_key = '';
+  const api_key = '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';
 
   const postData = JSON.stringify({
     model:  "gpt-3.5-turbo",
@@ -35,6 +35,7 @@ const sendMessageToGpt = async (userMessage) => {
     if (response.data && response.data.choices && response.data.choices.length > 0) {
       const gptResponse = response.data.choices[0].message.content.trim();
       conversation.push({ role: 'system', content: gptResponse });
+   
       console.log("GPT: " + gptResponse);
       return gptResponse;
     } else {
@@ -45,43 +46,99 @@ const sendMessageToGpt = async (userMessage) => {
   }
 };
 
+// 챗봇 UI styled
 
+const Container = styled.div`
+  width: 400px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+`;
 
+const ChatMessages = styled.div`
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+`;
+
+const UserInputContainer = styled.div`
+  display: flex;
+  padding: 10px;
+`;
+
+const UserInput = styled.input`
+  flex: 1;
+  padding: 10px;
+  outline: none;
+`;
+
+const SendButton = styled.button`
+  border: none;
+  background-color: #1e88e5;
+  color: white;
+  padding: 10px 15px;
+  cursor: pointer;
+`;
 
 
 
 function Chat() {
   const [inputValue, setInputValue] = useState('');
   const [displayText, setDisplayText] = useState('');
+  const [conversationHistory, setConversationHistory] = useState([]);
 
   const handleChange = (event) => {
     setInputValue(event.target.value);
   }
 
-  const handleClick = async  () => {
+  const handleClick = async () => {
     const question = inputValue;
-    let answer = "";
-    
-
 
     // 함수 사용 예제
-    answer = await sendMessageToGpt(question);
+    const answer = await sendMessageToGpt(question);
 
+    // 대화 기록에 메시지 추가
+    setConversationHistory(prevHistory => [
+      ...prevHistory,
+      { role: 'user', content: question },
+      { role: 'system', content: answer }
+    ]);
+
+    // 표시할 텍스트 업데이트
     setDisplayText(answer);
   }
 
+  // 대화 기록 초기화 함수
+  const handleClearHistory = () => {
+    setConversationHistory([]); // 대화 기록을 빈 배열로 초기화
+    setDisplayText(''); // 화면에 보이는 텍스트 초기화
+  }
+
   return (
-    <div className="App">
-      <input
-        type="text"
-        value={inputValue}
-        onChange={handleChange}
-      />
-      <button onClick={handleClick}>
-        버튼
-      </button>
-      <p>{displayText}</p>
-    </div>
+    <Container>
+      <ChatMessages>
+        <ul>
+          {conversationHistory.map((message, index) => (
+            <li key={index} className={message.role}>
+              {message.content}
+            </li>
+          ))}
+        </ul>
+      </ChatMessages>
+      <UserInputContainer>
+        <UserInput
+          type="text"
+          value={inputValue}
+          onChange={handleChange}
+          placeholder="메시지를 입력하세요..."
+        />
+        <SendButton onClick={handleClick}>전송</SendButton>
+        <button onClick={handleClearHistory}>대화 기록 초기화</button>
+      </UserInputContainer>
+    </Container>
   );
 }
 
