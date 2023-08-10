@@ -87,7 +87,7 @@ const SendButton = styled.button`
 
 function Chat() {
   const [inputValue, setInputValue] = useState('');
-  const [displayText, setDisplayText] = useState('');
+  const [setDisplayText] = useState('');
   const [conversationHistory, setConversationHistory] = useState([]);
 
   const handleChange = (event) => {
