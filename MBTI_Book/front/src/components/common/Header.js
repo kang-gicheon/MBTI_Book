@@ -63,7 +63,7 @@ const Header = ({user, onLogout}) => {
                 <div className='right'>
                     <UserInfo>{user.username}</UserInfo>
                     <Button to="/chat">채팅</Button>
-                    <Button to="/home">Do Test</Button> 
+                    <Button to="/home">MBTI Test</Button> 
                     <Button onClick={onLogout}>로그아웃</Button>
                 </div>
                 ) : (

@@ -14,12 +14,12 @@ let conversation = [
 const sendMessageToGpt = async (userMessage) => {
   conversation.push({ role: 'user', content: userMessage });
 
-  const api_key = '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';
+  const api_key = '';
 
   const postData = JSON.stringify({
     model:  "gpt-3.5-turbo",
     messages: conversation,
-    max_tokens: 100,
+    max_tokens: 300,
   });
 
 
