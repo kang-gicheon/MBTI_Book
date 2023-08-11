@@ -63,7 +63,7 @@ const PostList = ({ posts, loading, error, showWriteButton }) => {
   // 에러 발생 시
   useEffect(()=>{
     console.log(loading);
-    console.log(posts);
+    console.log('posts: ', posts);
   })
 
 
@@ -86,7 +86,7 @@ const PostList = ({ posts, loading, error, showWriteButton }) => {
         )}
       </WritePostButtonWrapper>
       {/*  로딩 중 아니고, 포스트 배열이 존재할 때만 보여줌 */}
-      {posts && 
+      {posts && Array.isArray(posts) &&
           posts.map(post => (
             <PostItem post={post} key={post._id} />
           ))
