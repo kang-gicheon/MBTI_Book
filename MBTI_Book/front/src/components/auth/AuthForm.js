@@ -118,12 +118,7 @@ const AuthForm = ({type, form, onChange, onSubmit, error}) => {
       <ButtonWithMarginTop cyan fullWidth={{marginTop: '1rem'}}>{text}</ButtonWithMarginTop>
     </form>
     <Footer>
-      {/* 누를시 홈으로 이동 */}
-<<<<<<< HEAD
-      <StyledLink onClick={handleClick}>홈으로 돌아가기  </StyledLink>
-=======
       <StyledLink onClick={handleClick}>홈으로 돌아가기</StyledLink><br/>
->>>>>>> dev(result2)
       {type === 'login' ? (
          <Link to="/register">회원가입</Link>
       ) : (

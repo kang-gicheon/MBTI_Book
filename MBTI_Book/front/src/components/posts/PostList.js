@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import Responsive from '../common/Responsive';
 import Button from '../common/Button';
@@ -61,8 +61,19 @@ const PostItem = ({ post }) => {
 
 const PostList = ({ posts, loading, error, showWriteButton }) => {
   // 에러 발생 시
+  useEffect(()=>{
+    console.log(loading);
+    console.log(posts);
+  })
+
+
   if (error) {
     return <PostListBlock>에러가 발생했습니다.</PostListBlock>;
+  }
+
+  
+  if(loading) {
+    return <PostListBlock>로딩로딩로딩로딩</PostListBlock>
   }
 
   return (
@@ -75,13 +86,11 @@ const PostList = ({ posts, loading, error, showWriteButton }) => {
         )}
       </WritePostButtonWrapper>
       {/*  로딩 중 아니고, 포스트 배열이 존재할 때만 보여줌 */}
-      {!loading && posts && (
-        <div>
-          {posts.map(post => (
+      {posts && 
+          posts.map(post => (
             <PostItem post={post} key={post._id} />
-          ))}
-        </div>
-      )}
+          ))
+      }
     </PostListBlock>
   );
 };

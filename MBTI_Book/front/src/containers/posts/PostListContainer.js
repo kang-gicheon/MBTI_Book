@@ -23,6 +23,11 @@ const PostListContainer = () => {
     dispatch(listPosts({ tag, username, page }));
   }, [dispatch, searchParams, username]);
 
+  useEffect(()=>{
+    console.log("1");
+    console.log(posts);
+  }, [posts])
+
   return (
     <PostList
       loading={loading}
