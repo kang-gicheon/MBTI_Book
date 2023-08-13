@@ -9,11 +9,13 @@ import { useNavigate } from 'react-router-dom';
  */
 
 const AuthFormBlock = styled.div`
-  h3{
-    margin: 0;
+  h3 {
+    margin: rem;
     color: ${palette.gray[8]};
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
+  max-width: 320px; /* 원하는 너비 값으로 설정하세요 */
+  padding: 0rem; /* 원하는 패딩 값으로 설정하세요 */
 `;
 
 /**
@@ -39,9 +41,11 @@ const StyledInput = styled.input`
  * 폼 하단에 로그인 혹은 회원가입 링크를 보여줌
  */
 const Footer = styled.div`
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 1rem;
-  text-align: right;
+  font-size: 0.875rem;
   a {
     color: ${palette.gray[6]};
     text-decoration: none;
@@ -50,6 +54,8 @@ const Footer = styled.div`
     }
   }
 `;
+
+
 
 const ButtonWithMarginTop = styled(Button)`
   margin-top: 1rem;

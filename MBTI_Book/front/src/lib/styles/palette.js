@@ -27,6 +27,10 @@ const palette = {
     '#0c8599',
     '#0b7285',
   ],
+  blue: [
+    // ...blue colors
+    '#3B82F6', // 6번 인덱스에 있는 값
+  ]
 };
 
 export default palette;

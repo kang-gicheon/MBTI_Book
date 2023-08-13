@@ -73,7 +73,7 @@ const PostList = ({ posts, loading, error, showWriteButton }) => {
 
   
   if(loading) {
-    return <PostListBlock>로딩로딩로딩로딩</PostListBlock>
+    return <PostListBlock>로딩</PostListBlock>
   }
 
   return (

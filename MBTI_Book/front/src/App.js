@@ -9,30 +9,10 @@ import Home from './pages/Home';
 import Question from './pages/Question';
 import Result from './pages/Result';
 import Resultdetail from './pages/ResultDetail';
-import styled, { createGlobalStyle } from "styled-components";
 import Chat from './pages/Chat';
+import styled, { } from "styled-components";
 
 
-const GlobalStyle = createGlobalStyle`
-  html {
-    height:100%;
-  }
-
-  body {
-    background: linear-gradient(to bottom, #F9E090, #FF935C);
-    height: 100%;
-    margin: 0;
-    color: #555;
-  }
-  `;
-
-const StyledWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 0 10px;
-`;
 
 export const StyledContainer = styled.div`
   width: 100%;
