@@ -10,8 +10,7 @@ import Question from './pages/Question';
 import Result from './pages/Result';
 import Resultdetail from './pages/ResultDetail';
 import Chat from './pages/Chat';
-import styled, { } from "styled-components";
-
+import styled from "styled-components";
 
 
 export const StyledContainer = styled.div`
@@ -29,8 +28,6 @@ export const StyledContainer = styled.div`
   left: 0;
   right: 0;
   top: 20%;
-
-
 `;
 
 export const StyledBtn = styled.button`
@@ -58,7 +55,6 @@ const App = () => {
       <title>MBTI</title>
     </Helmet>
 
-
     <Routes>
 
       <Route path="/Home" element={<Home />} />
@@ -78,8 +74,8 @@ const App = () => {
 
     </Routes>
 
-
   </>
+
   );
 };
 export default App;

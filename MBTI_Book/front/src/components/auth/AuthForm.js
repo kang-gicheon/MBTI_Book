@@ -4,6 +4,63 @@ import palette from "../../lib/styles/palette";
 import Button from './../common/Button';
 import { useNavigate } from 'react-router-dom';
 
+//속성: type:폼의 유형을 결정(login or register), form: 로그인 또는 회원가입 폼의 상태 객체, onChanger: 입력 필드의 값이 변경될 때 호출되는 이벤트 핸들러 등등..
+const AuthForm = ({type, form, onChange, onSubmit, error}) => {
+  //textMap에서 type에 해당하는 텍스트를 가져와 text 변수에 저장. 이 변수는 후에 폼의 타이틀과 버튼 텍스트로 사용
+  const text = textMap[type];
+    //리액트 라우터의 useNavigate 훅을 사용하여 navigate 함수를 정의합니다. 이 함수를 사용하여 페이지 이동 가능
+    const navigate = useNavigate();
+    //이 함수는 클릭 이벤트가 발생할 때 호출 됩니다.
+    const handleClick = () => {
+      //홈 화면으로 이동
+      navigate('/')
+    }
+  
+  return <AuthFormBlock>
+    <h3>{text}</h3>
+    <form onSubmit={onSubmit}>
+      <StyledInput autoComplete="username"
+       name="username"
+        placeholder="아이디" 
+        onChange={onChange} 
+        value={form.username}
+         />
+         
+      <StyledInput
+        autoComplete="new-password"
+        name="password"
+        placeholder="비밀번호"
+        type="password"
+        onChange={onChange} 
+        value={form.password}
+      />
+      {type === 'register' && (
+        <StyledInput
+          autoComplete="new-password"
+          name="passwordConfirm"
+          placeholder="비밀번호 확인"
+          type="password"
+          onChange={onChange} 
+          value={form.passwordConfirm}
+        />
+      )}
+      {error && <ErroMessage>{error}</ErroMessage>}
+      <ButtonWithMarginTop cyan fullWidth={{marginTop: '1rem'}}>{text}</ButtonWithMarginTop>
+    </form>
+    <Footer>
+      <StyledLink onClick={handleClick}>홈으로 돌아가기</StyledLink><br/>
+      {type === 'login' ? (
+         <Link to="/register">회원가입</Link>
+      ) : (
+        <Link to="/login">로그인</Link>
+      )}
+    </Footer>
+  </AuthFormBlock>;
+};
+
+export default AuthForm;
+
+
 /**
  * 회원가입 또는 로그인 폼을 보여준다.
  */
@@ -82,56 +139,3 @@ const StyledLink = styled.a`
   margin-left: 0;
   
 `;
-
-const AuthForm = ({type, form, onChange, onSubmit, error}) => {
-  const text = textMap[type];
-
-    const navigate = useNavigate();
-  
-    const handleClick = () => {
-      navigate('/')
-    }
-  
-  return <AuthFormBlock>
-    <h3>{text}</h3>
-    <form onSubmit={onSubmit}>
-      <StyledInput autoComplete="username"
-       name="username"
-        placeholder="아이디" 
-        onChange={onChange} 
-        value={form.username}
-         />
-         
-      <StyledInput
-        autoComplete="new-password"
-        name="password"
-        placeholder="비밀번호"
-        type="password"
-        onChange={onChange} 
-        value={form.password}
-      />
-      {type === 'register' && (
-        <StyledInput
-          autoComplete="new-password"
-          name="passwordConfirm"
-          placeholder="비밀번호 확인"
-          type="password"
-          onChange={onChange} 
-          value={form.passwordConfirm}
-        />
-      )}
-      {error && <ErroMessage>{error}</ErroMessage>}
-      <ButtonWithMarginTop cyan fullWidth={{marginTop: '1rem'}}>{text}</ButtonWithMarginTop>
-    </form>
-    <Footer>
-      <StyledLink onClick={handleClick}>홈으로 돌아가기</StyledLink><br/>
-      {type === 'login' ? (
-         <Link to="/register">회원가입</Link>
-      ) : (
-        <Link to="/login">로그인</Link>
-      )}
-    </Footer>
-  </AuthFormBlock>;
-};
-
-export default AuthForm;

@@ -14,9 +14,6 @@ const Home = () => {
     navigate("/question");
   };
 
-  
-
-
 
   return (
     <AuthTemplateBlock>
