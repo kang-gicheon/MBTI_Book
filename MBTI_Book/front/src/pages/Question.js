@@ -6,9 +6,12 @@ import { StyledContainer } from "../App";
 import { QuestionData } from "../assets/data/questiondata";
 import after from './afternoon.jpg'
 
+// 질문 컴포넌트 state 생성, 관리를 위한 함수
 const Question = () => {
+  // 특정 URL이동을 위한 navigate 생성
   const navigate = useNavigate();
   const [questionNo, setQuestionNo] = useState(0);
+  // 질문의 번호, 점수 상태 관리를 위한 state4 설정
   const [totalScore, setTotalScore] = useState([
     { id: "EI", score: 0 },
     { id: "SN", score: 0 },
@@ -16,13 +19,17 @@ const Question = () => {
     { id: "JP", score: 0 },
   ]);
 
+  // 다음 질문으로 넘어가기 위한 함수 생성
   const handelClickBtn = (no, type) => {
+    // map함수를 이용, 사용자의 선택에 따라 점수를 업데이트
     const newScore = totalScore.map((s) =>
       s.id === type ? { id: s.id, score: s.score + no } : s
     );
 
+    // 새로운 점수로 상태 업데이트
     setTotalScore(newScore);
 
+    // 추가로 질문할 질문이 있는지 여부를 확인
     if (QuestionData.length !== questionNo + 1) {
       //다음 문제로
       setQuestionNo(questionNo + 1);

@@ -7,13 +7,13 @@ import { StyledContainer, StyledBtn } from "../App";
 import { FaArrowRight } from "react-icons/fa";
 import morning from "./morning.jpg";
 
+// mbti 검사 메인 페이지
 
 const Home = () => {
-  const navigate = useNavigate();
-  const handleClickBtn = () => {
+  const navigate = useNavigate(); // 훅을 이용한 navigate 기능
+  const handleClickBtn = () => {  // 클릭 시 검사하기 영역으로 이동 함수
     navigate("/question");
   };
-
 
   return (
     <AuthTemplateBlock>
@@ -47,7 +47,7 @@ const Home = () => {
 
 export default Home;
 
-
+// 메인페이지 전체 영역 styled
 const AuthTemplateBlock = styled.div`
   position: absolute;
   left: 0;
@@ -64,7 +64,15 @@ const AuthTemplateBlock = styled.div`
   background-size: 100% 100%;
 `;  
 
+// 메인페이지 헤더 영역 styled
 
+/**
+ * 1. 헤더 영역 폰트 영역
+ * 2. 글씨 폰트 태그(p) 영역
+ * 3. 각 클래스 div 여백, 정렬 영역
+ * 4. 찰떡궁합 글씨 강조 영역
+ * 5. 도서 글씨 영역 색 지정
+ */
 const Header = styled.div`
   font-size: 1.35rem;
   font-family: "Jua";
@@ -99,12 +107,14 @@ const Header = styled.div`
   }
 `;
 
+// 메인페이지 헤더 로고 영역 styled
 const LogoImage = styled.div`
   margin-top: 30px;
 `;
 
+// 메인페이지 폰트 제목 영역 styled
 const Contents = styled.div`
-  display: flex;
+  display: flex;  
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -112,6 +122,8 @@ const Contents = styled.div`
 
 `;
 
+// 메인페이지 폰트 바디영역 styled
+// 메인페이지 폰트 p태그 영역 styled
 const Desc = styled.div`
   font-size: 20px;
   font-weight: 700;

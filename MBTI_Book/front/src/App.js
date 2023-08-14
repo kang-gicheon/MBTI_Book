@@ -47,6 +47,8 @@ export const StyledBtn = styled.button`
 `;
 
 
+// Router 경로 설정
+
 const App = () => {
   return (
   <>
@@ -57,14 +59,23 @@ const App = () => {
 
     <Routes>
 
+      {/* mbti 검사 메인페이지 router */}
       <Route path="/Home" element={<Home />} />
+      {/* 챗봇 */}
       <Route path="/Chat" element={<Chat />} />
+      {/* mbti 검사질문 router */}
       <Route path="/question" element={<Question />} />
+      {/* mbti 검사 결과 router */}
       <Route path="/result" element={<Result />} />
+      {/* mbti 개시판 목록 router */}
       <Route path="/" element={<PostListPage />} />
+      {/* 로그인 화면 router */}
       <Route path="/login" element={<LoginPage />} />
+      {/* 회원가입 화면 router */}
       <Route path="/register" element={<RegisterPage />} />
+      {/* 글 작성 화면 router */}
       <Route path="/write" element={<WritePage />} />
+       {/* 검사 결과 상세 화면 router */}
       <Route path='/Resultdetail' element={<Resultdetail/>}/>
 
       <Route path="/:username">

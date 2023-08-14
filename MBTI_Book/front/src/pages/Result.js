@@ -18,6 +18,7 @@ const Result = () => {
   //최종적으로 도출한 결과 객체
   const [resultData, setResultData] = useState({});
 
+  // 재렌더링 방지를 위한 mbti 검사 결과 effect
   useEffect(() => {
     const result = ResultData.find((s) => s.best === mbti);
     setResultData(result);
@@ -48,11 +49,11 @@ const Result = () => {
           </div>
         )}
       </Title>
-      <DogImage>
+      <MbtiImage>
         <div className="imageCircle">
           <img src={resultData.image} alt="결과 이미지" width={120} />
         </div>
-      </DogImage>
+      </MbtiImage>
       <Contents>
         <Desc>
           <div>
@@ -158,7 +159,7 @@ const Title = styled.div`
   }
 `;
 
-const DogImage = styled.div`
+const MbtiImage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
