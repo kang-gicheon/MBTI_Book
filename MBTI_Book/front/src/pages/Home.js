@@ -1,11 +1,11 @@
 import React from "react";
 //css-in-js
 import styled from "styled-components";
-import mainlogo from "../assets/dog/mainlogo.png";
+import mainlogo from "../assets/mbti/mainlogo.png";
 import { useNavigate } from "react-router-dom";
 import { StyledContainer, StyledBtn } from "../App";
 import { FaArrowRight } from "react-icons/fa";
-import morning from "./morning.jpg";
+import morning from "../assets/background/morning.jpg";
 
 // mbti 검사 메인 페이지
 

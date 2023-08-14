@@ -12,41 +12,6 @@ import Resultdetail from './pages/ResultDetail';
 import Chat from './pages/Chat';
 import styled from "styled-components";
 
-
-export const StyledContainer = styled.div`
-  width: 100%;
-  min-width: 300px;
-  max-width: 600px;
-  height: 600px;
-  padding: ${({ padding }) => padding};
-  background-color: #fff;
-  border-radius: 10px;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
-  position: fixed;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 20%;
-`;
-
-export const StyledBtn = styled.button`
-  display: block;
-  font-family: "Jua";
-  background-color: #ff935c;
-  color: #fff;
-  font-size: 0.85rem;
-  border: 0;
-  border-radius: 5px;
-  height: 55px;
-  min-width: 85%;
-  margin: 20px auto;
-  padding: 0;
-  cursor: pointer;
-  box-sizing: border-box;
-`;
-
-
 // Router 경로 설정
 
 const App = () => {
@@ -89,4 +54,37 @@ const App = () => {
 
   );
 };
+export const StyledContainer = styled.div`
+  width: 100%;
+  min-width: 300px;
+  max-width: 600px;
+  height: 600px;
+  padding: ${({ padding }) => padding};
+  background-color: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 20%;
+`;
+
+export const StyledBtn = styled.button`
+  display: block;
+  font-family: "Jua";
+  background-color: #ff935c;
+  color: #fff;
+  font-size: 0.85rem;
+  border: 0;
+  border-radius: 5px;
+  height: 55px;
+  min-width: 85%;
+  margin: 20px auto;
+  padding: 0;
+  cursor: pointer;
+  box-sizing: border-box;
+`;
+
 export default App;

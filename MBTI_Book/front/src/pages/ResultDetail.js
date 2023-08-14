@@ -3,32 +3,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
-
-
-const HoverableImageContainer = styled.div`
-  display: inline-block;
-  position: relative;
-  width: 200px;
-  height: 200px;
-`;
-
-const HoverText = styled.div`
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  width: 150px;
-  height: 200px;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  opacity: ${props => (props.isHovered ? 1 : 0)};
-  transition: opacity 0.3s ease;
-  overflow: auto;
-`;
-
-
+// 추천 도서 상세 설명을 위한 배열 - E를 위한 추천 도서 1번째 배열
 
 const imageArray1 = [
     {
@@ -51,6 +26,8 @@ const imageArray1 = [
     },
 
 ];
+
+// 추천 도서 상세 설명을 위한 배열 - E를 위한 추천 도서 2번째 배열
 
 const imageArray2 = [
 
@@ -75,6 +52,8 @@ const imageArray2 = [
 
 ];
 
+// 추천 도서 상세 설명을 위한 배열 - I를 위한 추천 도서 1번째 배열
+
 const imageArray3 = [
 
     {
@@ -97,6 +76,7 @@ const imageArray3 = [
     },
 
 ];
+// 추천 도서 상세 설명을 위한 배열 - I를 위한 추천 도서 2번째 배열
 
 const imageArray4 = [
 
@@ -123,12 +103,17 @@ const imageArray4 = [
 
 const Resultdetail = () => {
 
+    // 생성할 각 추천 도서 배열 상태관리를 위한 state
+    // 기본 상태를 false로 지정 - 특정 이벤트가 활성화 될시 true로 출력
+
     const [hoveredStates1, setHoveredStates1] = useState(imageArray1.map(() => false));
     const [hoveredStates2, setHoveredStates2] = useState(imageArray2.map(() => false));
     const [hoveredStates3, setHoveredStates3] = useState(imageArray3.map(() => false));
     const [hoveredStates4, setHoveredStates4] = useState(imageArray4.map(() => false));
 
-    // E를 위한 추천 도서 첫번째 배열 -  여행의 이유 ~ 셜록 홈즈
+    // E를 위한 추천 도서 첫번째 배열 - 이벤트 핸들러
+    // 여행의 이유 ~ 바스커빌 가의 개
+
     const handleMouseEnter1 = (index) => {
         const updatedStates = [...hoveredStates1];
         updatedStates[index] = true;
@@ -141,7 +126,9 @@ const Resultdetail = () => {
         setHoveredStates1(updatedStates);
       };
     
-    // E를 위한 추천 도서 두번째 배열 -  퍼스널 트레이닝 ~ 디자인...
+    // E를 위한 추천 도서 두번째 배열 - 이벤트 핸들러
+    // 퍼스널 트레이닝 ~ 디자인 이렇게 하면 되나요?
+
     const handleMouseEnter2 = (index) => {
         const updatedStates = [...hoveredStates2];
         updatedStates[index] = true;
@@ -155,7 +142,9 @@ const Resultdetail = () => {
       };
 
 
-          // I를 위한 추천 도서 첫번째 배열 - 
+    // I를 위한 추천 도서 첫번째 배열 - 이벤트 핸들러
+    // WINNIE - THE - POOH ~  예술이.. 변화시키는가?
+
     const handleMouseEnter3 = (index) => {
         const updatedStates = [...hoveredStates1];
         updatedStates[index] = true;
@@ -168,7 +157,9 @@ const Resultdetail = () => {
         setHoveredStates3(updatedStates);
       };
     
-    // I를 위한 추천 도서 두번째 배열 -  
+    // I를 위한 추천 도서 두번째 배열 - 이벤트 핸들러
+    // 나미야 잡화점의 기적 ~ 마시멜로 이야기
+
     const handleMouseEnter4 = (index) => {
         const updatedStates = [...hoveredStates2];
         updatedStates[index] = true;
@@ -182,6 +173,15 @@ const Resultdetail = () => {
       };
 
 
+    /**
+     * Background : 결과 상세페이지의 전체 배경 클래스
+     * container : 추천할 도서, 배너들을 담은 전체 블럭 클래스
+     * result_container : 배너 이미지를 담을 클래스
+     * recommend_container : mbti E, I 유형에 따라 출력할 제목 클래스
+     * recommend_list : mbti 추천 도서 배경(책장)
+     * re_book_list : mbti 추천 도서 이미지를 담을 클래스
+     *  + state를 통한 책 상세 설명 기능(Hover 적용)
+     */
 
     return (
     <div className='Background'>
@@ -300,5 +300,28 @@ const Resultdetail = () => {
         </div>
     );
 };
+
+const HoverableImageContainer = styled.div`
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+`;
+
+const HoverText = styled.div`
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  width: 150px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: ${props => (props.isHovered ? 1 : 0)};
+  transition: opacity 0.3s ease;
+  overflow: auto;
+`;
 
 export default Resultdetail;

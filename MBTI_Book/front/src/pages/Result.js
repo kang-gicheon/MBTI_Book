@@ -6,23 +6,34 @@ import styled from "styled-components";
 import Button from '../../src/components/common/Button';
 import { StyledContainer } from "../App";
 import { ResultData } from "../assets/data/resultData";
-import night from './realafternoon.jpg'
+import night from '../assets/background/realafternoon.jpg';
 
-
-
-
+// 선택한 질문 답변에 대하여 검사 결과를 출력할 컴포넌트 
 
 const Result = () => {
-  const [searchParams] = useSearchParams();
+  const [searchParams] = useSearchParams(); // URL 매개변수를 관리할 param
   const mbti = searchParams.get("mbti").toUpperCase();
   //최종적으로 도출한 결과 객체
   const [resultData, setResultData] = useState({});
 
   // 재렌더링 방지를 위한 mbti 검사 결과 effect
   useEffect(() => {
-    const result = ResultData.find((s) => s.best === mbti);
+    const result = ResultData.find((s) => s.best === mbti); // mbti와 일치하는 데이터를 탐색
+
+    // 결과 데이터 상태 업데이트
     setResultData(result);
   }, [mbti]);
+
+/**
+ * AuthTemplateBlock : 페이지 배경 컴포넌트
+ * Header : 페이지 상단 헤더 컴포넌트(제목)
+ * Title : 검사 결과가 출력될 컴포넌트 (ex. mbti - 책 장르)
+ * - 결과 데이터 조건 설정(글자 수 판별)
+ * MbtiImage : mbti 유형에 맞는 책 이미지를 출력
+ * Contents : mbti 결과에 맞는 특징과 책 종류를 출력
+ * Desc : Contents 태그 안에 감싸진 글들을 정렬, 유형 지정하는 컴포넌트
+ * Button : 각 이름에 해당하는 경로로 이동 역할을 하는 컴포넌트
+ */
 
   return (
     <>
@@ -35,14 +46,14 @@ const Result = () => {
       <Title>
         {resultData.name && resultData.name.length < 6 ? (
           <>
-            <p className="mbitName">{resultData.best}</p>
+            <p className="mbtiName">{resultData.best}</p>
             <BsFillSuitHeartFill className="heartIcon" />
             <p className="dogName">{resultData.name}</p>
           </>
         ) : (
-          <div className="longDogName">
+          <div className="longMbtiName">
             <div>
-              <p className="mbitName">{resultData.best}</p>
+              <p className="mbtiName">{resultData.best}</p>
               <BsFillSuitHeartFill className="heartIcon" />
             </div>
             <p className="dogName">{resultData.name}</p>
@@ -87,6 +98,8 @@ const Result = () => {
 
 export default Result;
 
+//  mbti 결과 페이지 영역 styled
+
 const AuthTemplateBlock = styled.div`
   position: absolute;
   left: 0;
@@ -102,6 +115,8 @@ const AuthTemplateBlock = styled.div`
   background-repeat: no-repeat;
   background-size: 100% 100%;
 `;  
+
+// mbti 결과 헤더 영역(제목)
 
 const Header = styled.div`
   display: block;
@@ -120,7 +135,7 @@ const Header = styled.div`
   align-items: center;
 `;
 
-
+// mbti 결과 영역(mbti 결과 - 추천하는 책 장르)
 
 const Title = styled.div`
   display: flex;
@@ -137,14 +152,14 @@ const Title = styled.div`
   .heartIcon {
     color: #dc5353;
   }
-  .mbitName {
+  .mbtiName {
     font-size: 1rem;
   }
   .dogName {
     font-size: 1.2rem;
   }
 
-  .longDogName {
+  .longMbtiName {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -158,6 +173,8 @@ const Title = styled.div`
     }
   }
 `;
+
+// mbti 결과 영역(mbti 결과에 해당하는 책 장르 이미지 + 이미지 애니메이션)
 
 const MbtiImage = styled.div`
   display: flex;
@@ -219,12 +236,16 @@ const MbtiImage = styled.div`
   }
 `;
 
+// mbti 결과 영역(mbti 결과에 해당하는 특징 정리)
+
 const Contents = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
+
+// Contents 태그 안에 감싸진 글들을 정렬, 유형 지정
 
 const Desc = styled.div`
   font-family: "Jua";

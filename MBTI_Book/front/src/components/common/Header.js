@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Responsive from './Responsive';
 import Button from './Button';
 import {Link} from 'react-router-dom'
-import main from '../../assets/dog/mainlogo.png'
+import main from '../../assets/mbti/mainlogo.png'
 
 
 const HeaderBlock = styled.div`

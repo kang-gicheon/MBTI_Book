@@ -4,14 +4,14 @@ import { createSearchParams, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { StyledContainer } from "../App";
 import { QuestionData } from "../assets/data/questiondata";
-import after from './afternoon.jpg'
+import after from '../assets/background/afternoon.jpg';
 
 // 질문 컴포넌트 state 생성, 관리를 위한 함수
 const Question = () => {
   // 특정 URL이동을 위한 navigate 생성
   const navigate = useNavigate();
   const [questionNo, setQuestionNo] = useState(0);
-  // 질문의 번호, 점수 상태 관리를 위한 state4 설정
+  // 질문의 번호, 점수 상태 관리를 위한 state 설정
   const [totalScore, setTotalScore] = useState([
     { id: "EI", score: 0 },
     { id: "SN", score: 0 },
@@ -52,6 +52,14 @@ const Question = () => {
 
     setQuestionNo(questionNo + 1);
   };
+
+/**
+ * AuthTemplateBlock : 페이지 배경 컴포넌트
+ * Title : 질문한 제목을 표시하는 컴포넌트
+ * ButtonGroup : 2개의 질문을 표시하고 선택이 가능한 컴포넌트
+ * Button : 질문의 각 선택지를 표시하며 QuestionData 배열에서 질문을 가져옴
+ * Button의 동작방식은 handelClickBtn 함수를 호출하여 선택지에 따라 결과를 업데이트 함
+ */
 
   return (
     <AuthTemplateBlock>
@@ -106,6 +114,8 @@ const Question = () => {
 
 export default Question;
 
+// 질문페이지 전체 영역 styled
+
 const AuthTemplateBlock = styled.div`
   position: absolute;
   left: 0;
@@ -123,6 +133,8 @@ const AuthTemplateBlock = styled.div`
 `;  
 
 
+// 질문페이지 제목 영역 styled + p태그(글씨 영역)
+
 const Title = styled.div`
   font-size: 15pt;
   text-align: center;
@@ -138,6 +150,8 @@ const Title = styled.div`
     margin: 0;
   }
 `;
+
+// 질문페이지 버튼 영역(폰트 적용, 위치 조정)
 
 const ButtonGroup = styled.div`
   display: flex;

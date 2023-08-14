@@ -3,8 +3,10 @@ body{
 
 }
 
+/* 메인 페이지 배경 */
+
 .Background{
-    background-image: url('./night1.jpg');
+    background-image: url('../assets/background/night1.jpg');
 }
 
 .E_style{
@@ -44,7 +46,7 @@ body{
     display: flex;
     flex-direction: row;
     margin: 20px;
-    background-image: url('./banner.png');
+    background-image: url('../assets/ResultDetail/banner.png');
 
 }
 
@@ -131,7 +133,7 @@ body{
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    background-image: url('./bookholder.png');
+    background-image: url('../assets/ResultDetail/bookholder.png');
 }
 
 .mbti_re_book_title{

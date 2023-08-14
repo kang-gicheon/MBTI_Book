@@ -1,19 +1,19 @@
-import Infj from "../dog/infj.png";
-import Intj from "../dog/intj.png";
-import Istp from "../dog/istp.png";
-import Istj from "../dog/istj.png";
-import Intp from "../dog/intp.png";
-import Isfj from "../dog/isfj.png";
-import Isfp from "../dog/isfp.png";
-import Infp from "../dog/infp.png";
-import Entp from "../dog/entp.png";
-import Estp from "../dog/estp.png";
-import Estj from "../dog/estj.png";
-import Entj from "../dog/entj.png";
-import Enfp from "../dog/enfp.png";
-import Esfj from "../dog/esfj.png";
-import Enfj from "../dog/enfj.png";
-import Esfp from "../dog/esfp.png";
+import Infj from "../mbti/infj.png";
+import Intj from "../mbti/intj.png";
+import Istp from "../mbti/istp.png";
+import Istj from "../mbti/istj.png";
+import Intp from "../mbti/intp.png";
+import Isfj from "../mbti/isfj.png";
+import Isfp from "../mbti/isfp.png";
+import Infp from "../mbti/infp.png";
+import Entp from "../mbti/entp.png";
+import Estp from "../mbti/estp.png";
+import Estj from "../mbti/estj.png";
+import Entj from "../mbti/entj.png";
+import Enfp from "../mbti/enfp.png";
+import Esfj from "../mbti/esfj.png";
+import Enfj from "../mbti/enfj.png";
+import Esfp from "../mbti/esfp.png";
 
 export const ResultData = [
   {
