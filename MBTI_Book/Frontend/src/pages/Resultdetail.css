@@ -1,0 +1,159 @@
+body{
+    margin: 0 auto;
+
+}
+
+/* 메인 페이지 배경 */
+
+.Background{
+    background-image: url('../assets/background/night1.jpg');
+}
+
+.E_style{
+    font-size: 35px;
+    color: rgb(255, 0, 0);
+    margin: 8px;
+}
+
+.I_style{
+    font-size: 35px;
+    color: rgb(22, 168, 54);
+    margin: 8px;
+}
+
+.container{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 1200px;
+    height: 2000px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+    position: relative;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.result_container{
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 97%;
+    height: 900px;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    background-image: url('../assets/ResultDetail/banner.png');
+
+}
+
+.mbti_book{
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 50%;
+    height: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 10px;
+}
+
+.mbti_explain{
+    width: 100%;
+    height: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+
+}
+
+/* mbti 스크롤바 속성 시작 */
+.mbti_explain::-webkit-scrollbar {
+    width: 10px;
+}
+.mbti_explain::-webkit-scrollbar-thumb {
+    background-color: #ff935c;
+  }
+.mbti_explain::-webkit-scrollbar-track {
+    background-color: #fdc2a4;
+  }
+  /* mbti 스크롤바 속성 끝 */
+
+
+.recommend_icon{
+    width: 100%;
+    height: 70%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.icon{
+    max-width: 100%;
+    max-height: 100%;
+    width: 600px;
+    height: 600px;
+
+}
+
+
+/* 동일 mbti 인물 설명 텝 속성 */
+.mbti_people{
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 50%;
+    height: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-left: 10px;
+
+}
+
+
+
+.recommend_container{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.h2_title{
+    font-size: 1.5em;
+}
+
+.recommend_list{
+    width: 97%;
+    height: 270px;
+    margin-bottom: 40px;
+    padding: 15px;
+    box-sizing: content-box;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../assets/ResultDetail/bookholder.png');
+}
+
+.mbti_re_book_title{
+    width: 100%;
+    margin: 10px;
+    box-sizing: content-box;
+}
+
+.re_book_list{
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+
+.re_book_icon{
+    width: 200px;
+    height: 250px;
+}
