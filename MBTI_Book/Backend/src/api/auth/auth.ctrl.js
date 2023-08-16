@@ -47,7 +47,6 @@ export const register = async (ctx) => {
     ctx.throw(500, e);
   }
 };
-
 /*
   POST /api/auth/login
   {

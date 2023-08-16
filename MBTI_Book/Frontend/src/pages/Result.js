@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 //css-in-js
 import { BsFillSuitHeartFill } from "react-icons/bs";
 import { Link, useSearchParams } from "react-router-dom";

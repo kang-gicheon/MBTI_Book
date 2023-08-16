@@ -4,8 +4,6 @@ import Joi from '@hapi/joi';
 import sanitizeHtml from 'sanitize-html';
 
 
-
-
 const { ObjectId } = mongoose.Types;
 
 const sanitizeOption = {

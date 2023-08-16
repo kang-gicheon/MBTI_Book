@@ -2,29 +2,6 @@ import './Resultdetail.css'
 import { useState } from 'react';
 import styled from 'styled-components';
 
-const HoverableImageContainer = styled.div`
-  display: inline-block;
-  position: relative;
-  width: 200px;
-  height: 200px;
-`;
-
-const HoverText = styled.div`
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  width: 150px;
-  height: 200px;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  opacity: ${props => (props.isHovered ? 1 : 0)};
-  transition: opacity 0.3s ease;
-  overflow: auto;
-`;
-
 const imageArray1 = [
     {
         src: 'https://img.libbook.co.kr/V2/BookImgK15/9788954655972.gif',
@@ -311,3 +288,26 @@ const Resultdetail = () => {
 };
 
 export default Resultdetail;
+
+const HoverableImageContainer = styled.div`
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+`;
+
+const HoverText = styled.div`
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  width: 150px;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: ${props => (props.isHovered ? 1 : 0)};
+  transition: opacity 0.3s ease;
+  overflow: auto;
+`;

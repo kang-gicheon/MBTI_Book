@@ -1,4 +1,3 @@
-import React from "react";
 //css-in-js
 import styled from "styled-components";
 import mainlogo from "../assets/mbti/mainlogo.png";
