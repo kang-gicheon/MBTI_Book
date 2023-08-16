@@ -56,3 +56,7 @@ mbti가 많은 사람들에게 관심분야가 됐고 이와 접목시켜 이런
 
 ![MBTI Diagram](./gif/MBTI-Chrome-2023-08-16-13-44-49.gif)
 
+## 추가 구현 기능
+
+![CreatePlan](./img/Chatpng.png)
+
