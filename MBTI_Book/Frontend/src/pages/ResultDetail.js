@@ -174,6 +174,7 @@ const Resultdetail = () => {
 
 
     /**
+     * 결과 상세페이지 return값에 들어갈 클래스들
      * Background : 결과 상세페이지의 전체 배경 클래스
      * container : 추천할 도서, 배너들을 담은 전체 블럭 클래스
      * result_container : 배너 이미지를 담을 클래스
